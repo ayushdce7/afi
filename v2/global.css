@@ -1,0 +1,250 @@
+/* ═══════════════════════════════════════════════════════════════
+   AFI SYSTEMS — Global CSS  (tokens + reset + utilities)
+   Color hierarchy from logo:
+     CENTER  = Blue   (#1a5fa8)  → MOST dominant — primary actions, nav, headers
+     RIGHT   = Cyan   (#18a8aa)  → Second — accents, highlights, icons
+     LEFT    = Green  (#5aad22)  → Least — subtle tags, badges, minor accents
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── DESIGN TOKENS ── */
+:root {
+  /* ── Primary: Blue (center logo circle — most used) ── */
+  --blue:       #1a5fa8;
+  --blue-d:     #134c88;
+  --blue-2:     #1e6fc4;
+  --blue-l:     #e8f1fb;
+  --blue-ll:    #f0f5fd;
+
+  /* ── Secondary: Cyan/Teal (right logo circle — second most) ── */
+  --cyan:       #18a8aa;
+  --cyan-d:     #128688;
+  --cyan-l:     #e4f6f7;
+  --cyan-ll:    #edfafa;
+
+  /* ── Tertiary: Green (left logo circle — least used) ── */
+  --green:      #5aad22;
+  --green-d:    #458a18;
+  --green-l:    #eef7e6;
+
+  /* ── Neutrals ── */
+  --dark:       #0d1822;
+  --mid:        #16253a;
+  --mid2:       #1e3050;
+  --body:       #2e3e52;
+  --muted:      #6a7d92;
+  --border:     #d8e4f0;
+  --light:      #f4f7fc;
+  --white:      #ffffff;
+  --red:        #d63030;
+  --gold:       #f0a500;
+
+  /* ── Typography ── */
+  --font-d: 'Playfair Display', serif;   /* Display / italic decorative */
+  --font-h: 'Barlow Condensed', sans-serif; /* Section headings — bold/condensed */
+  --font-b: 'DM Sans', sans-serif;       /* Body text — clean/readable */
+
+  /* ── Shadows ── */
+  --sh1: 0 2px 10px rgba(26,95,168,.07);
+  --sh2: 0 6px 28px rgba(26,95,168,.12);
+  --sh3: 0 14px 48px rgba(26,95,168,.17);
+
+  /* ── Transitions ── */
+  --t1: all .18s ease;
+  --t2: all .28s ease;
+  --t3: all .42s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── RESET ── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: var(--font-b);
+  color: var(--body);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+img { max-width:100%; display:block; }
+a { text-decoration:none; color:inherit; transition:var(--t1); }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:#edf2f8; }
+::-webkit-scrollbar-thumb { background:var(--blue); border-radius:3px; }
+
+/* ── GOOGLE FONTS ── */
+/* loaded via <link> in HTML head */
+
+/* ══════════════════════════════════════════════════
+   SCROLL REVEAL ANIMATIONS
+══════════════════════════════════════════════════ */
+.anim-title {
+  opacity:0; transform:translateY(36px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.anim-title.in { opacity:1; transform:translateY(0); }
+
+.anim-fade {
+  opacity:0; transition: opacity .7s ease .15s;
+}
+.anim-fade.in { opacity:1; }
+
+.anim-left {
+  opacity:0; transform:translateX(-40px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.anim-left.in { opacity:1; transform:translateX(0); }
+
+.anim-right {
+  opacity:0; transform:translateX(40px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.anim-right.in { opacity:1; transform:translateX(0); }
+
+.anim-up {
+  opacity:0; transform:translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.anim-up.in { opacity:1; transform:translateY(0); }
+/* Stagger children */
+.anim-up:nth-child(2) { transition-delay:.10s; }
+.anim-up:nth-child(3) { transition-delay:.20s; }
+.anim-up:nth-child(4) { transition-delay:.30s; }
+.anim-up:nth-child(5) { transition-delay:.40s; }
+.anim-up:nth-child(6) { transition-delay:.50s; }
+
+/* ══════════════════════════════════════════════════
+   SECTION HEADER SYSTEM
+   — Eyebrow in BLUE (dominant)
+   — Accent span in CYAN (second)
+   — Underbar in BLUE
+══════════════════════════════════════════════════ */
+.sec-eye {
+  display: inline-flex; align-items:center; gap:6px;
+  background: var(--blue-l); color: var(--blue);
+  font-family: var(--font-b); font-size:.68rem; font-weight:700;
+  letter-spacing:2.5px; text-transform:uppercase;
+  padding:5px 14px; border-radius:20px;
+  border: 1px solid rgba(26,95,168,.22);
+  margin-bottom:10px;
+  transition: var(--t1);
+}
+.sec-eye:hover { background:var(--blue); color:#fff; }
+
+.sec-title {
+  font-family: var(--font-h);
+  font-size: clamp(1.9rem,3.5vw,2.6rem);
+  font-weight:900; color:var(--dark);
+  text-transform:uppercase; letter-spacing:.5px; line-height:1.1;
+}
+/* Accent word → CYAN */
+.sec-title span { color: var(--cyan); }
+/* Italic display accent */
+.sec-title em {
+  font-family: var(--font-d);
+  font-style:italic; text-transform:none;
+  color: var(--cyan);
+}
+
+.sec-bar {
+  width:44px; height:3px;
+  background: var(--blue); /* blue underbar */
+  border-radius:2px; margin:12px auto 0;
+  transition: width .4s ease;
+}
+.sec-hdr:hover .sec-bar,
+.sec-hdr-l:hover .sec-bar { width:80px; }
+
+.sec-hdr   { text-align:center; margin-bottom:44px; }
+.sec-hdr-l { text-align:left;   margin-bottom:44px; }
+.sec-hdr-l .sec-bar { margin-left:0; }
+
+.sec-sub {
+  font-family: var(--font-b); color:var(--muted);
+  font-size:.93rem; margin-top:10px; line-height:1.7;
+}
+
+/* ══════════════════════════════════════════════════
+   SHARED BUTTONS
+══════════════════════════════════════════════════ */
+
+/* Primary — BLUE (most used) */
+.btn-primary-blue {
+  display: inline-flex; align-items:center; gap:8px;
+  background: var(--blue); color:#fff;
+  padding:12px 26px; border-radius:6px;
+  font-family:var(--font-b); font-weight:700; font-size:.9rem;
+  border:none; cursor:pointer;
+  box-shadow: 0 4px 16px rgba(26,95,168,.35);
+  transition: background .22s, transform .22s, box-shadow .22s;
+}
+.btn-primary-blue:hover {
+  background:var(--blue-d); color:#fff;
+  transform:translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,95,168,.45);
+}
+
+/* Secondary — Cyan outline */
+.btn-outline-cyan {
+  display:inline-flex; align-items:center; gap:8px;
+  background:transparent; color:var(--cyan);
+  padding:11px 24px; border-radius:6px;
+  font-family:var(--font-b); font-weight:700; font-size:.9rem;
+  border:1.5px solid var(--cyan);
+  transition: background .22s, color .22s, transform .22s;
+}
+.btn-outline-cyan:hover {
+  background:var(--cyan); color:#fff;
+  transform:translateY(-2px);
+}
+
+/* Tertiary — Green (used sparingly) */
+.btn-green-sm {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--green-l); color:var(--green-d);
+  padding:7px 14px; border-radius:5px;
+  font-family:var(--font-b); font-weight:700; font-size:.8rem;
+  border:1px solid rgba(90,173,34,.25);
+  transition:var(--t1);
+}
+.btn-green-sm:hover { background:var(--green); color:#fff; }
+
+/* WhatsApp */
+.btn-wa {
+  display:inline-flex; align-items:center; gap:7px;
+  background:#25D366; color:#fff;
+  padding:12px 24px; border-radius:6px;
+  font-family:var(--font-b); font-weight:700; font-size:.9rem;
+  transition:background .22s, transform .22s;
+}
+.btn-wa:hover { background:#1fba58; transform:translateY(-2px); color:#fff; }
+
+/* ══════════════════════════════════════════════════
+   FLOATING WHATSAPP + BACK TO TOP
+══════════════════════════════════════════════════ */
+.wa-float {
+  position:fixed; bottom:22px; right:22px; z-index:9999;
+  width:54px; height:54px; border-radius:50%;
+  background:#25D366; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.55rem; text-decoration:none;
+  animation: waPulse 2.8s infinite;
+  transition: transform .25s;
+}
+.wa-float:hover { transform:scale(1.1); color:#fff; }
+@keyframes waPulse {
+  0%,100% { box-shadow:0 6px 20px rgba(37,211,102,.55); }
+  50%      { box-shadow:0 6px 36px rgba(37,211,102,.9), 0 0 0 10px rgba(37,211,102,.1); }
+}
+
+#btt {
+  position:fixed; bottom:22px; left:22px; z-index:9998;
+  width:40px; height:40px; border-radius:5px;
+  background:var(--blue); color:#fff; border:none;
+  font-size:.9rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .3s, transform .25s, background .22s;
+  box-shadow:var(--sh1);
+}
+#btt.show { opacity:1; }
+#btt:hover { transform:translateY(-3px); background:var(--blue-d); }

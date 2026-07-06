@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>AFI Systems – Affordable Furniture Interiors Systems</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet"/>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+<!-- ═══ AFI STYLESHEETS (load order matters) ═══ -->
+<link rel="stylesheet" href="global.css"/>          <!-- tokens, reset, utilities -->
+<link rel="stylesheet" href="header-footer.css"/>   <!-- topbar, navbar, footer — shared -->
+<link rel="stylesheet" href="home.css"/>            <!-- homepage-only sections -->
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     TOP UTILITY BAR
+════════════════════════════════════════ -->
+<div id="topbar">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div class="tb-links justify-content-center justify-content-md-start">
+        <a href="tel:+919818251017"><i class="fas fa-phone-alt"></i>+91 98182 51017</a>
+        <a href="mailto:info@afisystems.in"><i class="fas fa-envelope"></i>info@afisystems.in</a>
+        <span class="hide-xs" style="display:flex;align-items:center;gap:5px;color:#8fb0cc;">
+          <i class="fas fa-map-marker-alt" style="color:var(--cyan)"></i>Delhi NCR, India
+        </span>
+      </div>
+      <div class="tb-right">
+        <span style="font-size:.7rem;color:#5a7a92;">Mon–Sat · 10AM–7PM</span>
+        <a href="https://wa.me/919818251017" target="_blank" class="wa-pill">
+          <i class="fab fa-whatsapp"></i>WhatsApp
+        </a>
+        <a href="#contact" class="q-pill">
+          <i class="fas fa-file-alt"></i>Request Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     MAIN NAVBAR — Logo centered & large
+════════════════════════════════════════ -->
+<nav id="mainNav">
+  <div class="container">
+
+    <!-- Desktop 3-column grid -->
+    <div class="nav-grid d-none d-lg-grid">
+
+      <!-- Left nav links -->
+      <ul class="nav-left">
+        <li class="active"><a href="#">Home</a></li>
+        <li>
+          <a href="#about">About <i class="fas fa-chevron-down" style="font-size:.52rem;opacity:.5"></i></a>
+          <div class="nav-drop">
+            <a href="#">Our Story</a>
+            <a href="#">Manufacturing Unit</a>
+            <a href="#">Certifications</a>
+          </div>
+        </li>
+        <li>
+          <a href="#offerings">Products <i class="fas fa-chevron-down" style="font-size:.52rem;opacity:.5"></i></a>
+          <div class="nav-drop">
+            <a href="#">Office Chairs</a>
+            <a href="#">Workstations</a>
+            <a href="#">Sofa &amp; Lounge</a>
+            <a href="#">Wardrobes</a>
+            <a href="#">Conference Tables</a>
+            <a href="#">Metal Storage</a>
+          </div>
+        </li>
+        <li><a href="#spaces">Spaces</a></li>
+      </ul>
+
+      <!-- Center logo (bigger) -->
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="AFI Systems – Affordable Furniture Interiors Systems"/>
+      </a>
+
+      <!-- Right nav links -->
+      <ul class="nav-right">
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#testi">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://wa.me/919818251017?text=Hi%20AFI%20Systems%2C%20I%27d%20like%20a%20quote!" target="_blank" class="btn-nav-q">
+            <i class="fab fa-whatsapp"></i>Get Quote
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile header -->
+    <div class="d-flex d-lg-none align-items-center justify-content-between py-2">
+      <a href="#"><img src="logo.png" alt="AFI Systems" style="height:50px;"/></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse d-lg-none" id="mobNav">
+      <div class="mob-bar">
+        <a href="#">Home</a>
+        <a href="#offerings">Products</a>
+        <a href="#spaces">Spaces</a>
+        <a href="#clients">Clients</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/919818251017" target="_blank" class="mob-bar-cta">
+          <i class="fab fa-whatsapp"></i>WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════
+     HERO SLIDER
+════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-track" id="heroTrack">
+
+    <!-- Slide 1 -->
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=80&fit=crop" alt="Modern Office"/>
+      <div class="container hero-body w-100">
+        <div class="hero-eye"><i class="fas fa-star"></i>Trusted by 1000+ Clients Across Delhi NCR</div>
+        <h1 class="hero-title">Smart Furniture for<br><span class="ac">Modern Offices</span></h1>
+        <p class="hero-sub">From workstations to executive suites — complete office furniture designed &amp; manufactured in-house.</p>
+        <div class="hero-cta">
+          <a href="#offerings" class="btn-gp"><i class="fas fa-th-large"></i>Explore Products</a>
+          <a href="https://wa.me/919818251017?text=Hi%20AFI!" target="_blank" class="btn-go"><i class="fab fa-whatsapp"></i>Free Consultation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80&fit=crop" alt="Living Space"/>
+      <div class="container hero-body w-100">
+        <div class="hero-eye"><i class="fas fa-home"></i>Home &amp; Commercial Interiors</div>
+        <h1 class="hero-title">Elevate Every<br><em>Living Space</em></h1>
+        <p class="hero-sub">Premium sofas, wardrobes, modular kitchens and lounge furniture crafted for style and lasting comfort.</p>
+        <div class="hero-cta">
+          <a href="#offerings" class="btn-gp"><i class="fas fa-couch"></i>View Collection</a>
+          <a href="#contact" class="btn-go"><i class="fas fa-phone-alt"></i>Get a Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80&fit=crop" alt="Custom Manufacturing"/>
+      <div class="container hero-body w-100">
+        <div class="hero-eye"><i class="fas fa-industry"></i>Own Manufacturing · Custom Sizes</div>
+        <h1 class="hero-title">Built to Your<br><span class="ac">Exact Spec</span></h1>
+        <p class="hero-sub">Custom manufacturing — your dimensions, your finish, your budget. B2B &amp; bulk orders welcome.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-gp"><i class="fas fa-pencil-ruler"></i>Start Custom Order</a>
+          <a href="#spaces" class="btn-go"><i class="fas fa-layer-group"></i>See Spaces</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Arrows -->
+  <button class="hero-arr prev" id="heroPrev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+  <button class="hero-arr next" id="heroNext" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+
+  <!-- Dots -->
+  <div class="hero-dots">
+    <button class="hero-dot active" data-i="0" aria-label="Slide 1"></button>
+    <button class="hero-dot"        data-i="1" aria-label="Slide 2"></button>
+    <button class="hero-dot"        data-i="2" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     STATS BAND
+════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-title anim-title">A <span>PROVEN TRACK RECORD</span></div>
+    <div class="stats-row">
+      <div class="stat-it anim-up">
+        <span class="stat-n" data-target="12">0</span><span class="stat-sfx">+</span>
+        <span class="stat-l">Years of<br>Experience</span>
+      </div>
+      <div class="stat-it anim-up">
+        <span class="stat-n" data-target="1000">0</span><span class="stat-sfx">+</span>
+        <span class="stat-l">Projects<br>Delivered</span>
+      </div>
+      <div class="stat-it anim-up">
+        <span class="stat-n" data-target="3000">0</span><span class="stat-sfx">+</span>
+        <span class="stat-l">Products<br>Manufactured</span>
+      </div>
+      <div class="stat-it anim-up">
+        <span class="stat-n" data-target="500">0</span><span class="stat-sfx">+</span>
+        <span class="stat-l">Corporate<br>Clients</span>
+      </div>
+      <div class="stat-it anim-up">
+        <span class="stat-n" data-target="100">0</span><span class="stat-sfx">%</span>
+        <span class="stat-l">Customer<br>Satisfaction</span>
+      </div>
+      <div class="stat-it anim-up">
+        <span class="stat-n" data-target="15">0</span><span class="stat-sfx" style="font-size:.9rem;"> Days</span>
+        <span class="stat-l">Avg. Delivery<br>Time</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INDUSTRIES WE SERVE
+════════════════════════════════════════ -->
+<section id="industries">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-th"></i>Who We Serve</div>
+      <h2 class="sec-title anim-title">Industries We <span>Serve</span></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <!-- Built by home.js -->
+    <div class="ind-grid" id="indGrid"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SPACES WE CATER TO
+════════════════════════════════════════ -->
+<section id="spaces">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-layer-group"></i>Where We Work</div>
+      <h2 class="sec-title anim-title">Spaces We <span>Cater To</span></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <div class="spaces-grid anim-up">
+      <!-- Featured — spans 2 cols, row 1 -->
+      <div class="sp-card sp-feat">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000&q=80&fit=crop" alt="Office Space"/>
+        <div class="sp-lbl"><h4>Office</h4><p>Smart, functional furniture for corporate &amp; commercial spaces</p></div>
+      </div>
+      <!-- Col 3, row 1 -->
+      <div class="sp-card">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=75&fit=crop" alt="Hospitality"/>
+        <div class="sp-lbl"><h4>Hospitality</h4><p>Café &amp; restaurant furniture</p></div>
+      </div>
+      <!-- Row 2 — three equal cols -->
+      <div class="sp-card">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=75&fit=crop" alt="Education"/>
+        <div class="sp-lbl"><h4>Education</h4><p>School &amp; college benches</p></div>
+      </div>
+      <div class="sp-card">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=75&fit=crop" alt="Healthcare"/>
+        <div class="sp-lbl"><h4>Healthcare</h4><p>Clinic &amp; hospital furniture</p></div>
+      </div>
+      <div class="sp-card">
+        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=75&fit=crop" alt="Retail"/>
+        <div class="sp-lbl"><h4>Retail</h4><p>Display &amp; storage units</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     OUR OFFERINGS — click-navigated carousels
+════════════════════════════════════════ -->
+<section id="offerings">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-box-open"></i>Products</div>
+      <h2 class="sec-title anim-title">Our <span>Offerings</span></h2>
+      <div class="sec-bar"></div>
+      <p class="sec-sub">Premium furniture across every category — retail &amp; bulk supply</p>
+    </div>
+
+    <!-- Seating Collection -->
+    <div class="off-section anim-up">
+      <div class="off-hdr">
+        <div class="off-hdr-left">
+          <div class="off-icon"><i class="fas fa-th-large"></i></div>
+          <h3>Seating Collection</h3>
+        </div>
+        <div class="off-hdr-right">
+          <a href="https://wa.me/919818251017?text=Hi%20AFI%2C%20please%20share%20the%20seating%20catalogue!" target="_blank" class="btn-view-all">
+            <i class="fab fa-whatsapp"></i>View All
+          </a>
+          <button class="off-arr-btn" id="chPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <button class="off-arr-btn" id="chNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="off-viewport">
+        <div class="off-track" id="chairsTrack"></div>
+      </div>
+    </div>
+
+    <!-- Tables & Storage -->
+    <div class="off-section anim-up">
+      <div class="off-hdr">
+        <div class="off-hdr-left">
+          <div class="off-icon"><i class="fas fa-th-large"></i></div>
+          <h3>Tables &amp; Storage</h3>
+        </div>
+        <div class="off-hdr-right">
+          <a href="https://wa.me/919818251017?text=Hi%20AFI%2C%20please%20share%20the%20tables%20catalogue!" target="_blank" class="btn-view-all">
+            <i class="fab fa-whatsapp"></i>View All
+          </a>
+          <button class="off-arr-btn" id="tbPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <button class="off-arr-btn" id="tbNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="off-viewport">
+        <div class="off-track" id="tablesTrack"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CORPORATE VIDEO
+════════════════════════════════════════ -->
+<section id="vid-sec">
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"/>
+  </video>
+  <img class="vid-fallback" id="vidFallback"
+       src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80&fit=crop"
+       alt="AFI Systems Showroom" style="display:none;"/>
+  <div class="container vid-overlay">
+    <div class="vid-title anim-left">Corporate Video</div>
+    <p style="color:rgba(255,255,255,.55);font-family:var(--font-b);font-size:.9rem;margin-top:5px;" class="anim-left">
+      See how we transform spaces across Delhi NCR
+    </p>
+    <button class="play-ring anim-left" id="vidPlayBtn" title="Play / Pause">
+      <i class="fas fa-pause" id="vidIcon"></i>
+    </button>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROJECTS HANDED OVER TO
+════════════════════════════════════════ -->
+<section id="clients">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-handshake"></i>Our Clients</div>
+      <h2 class="sec-title anim-title">Projects <span>Handed Over To</span></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <!-- Built by home.js -->
+    <div class="client-grid anim-up" id="clientGrid"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FLAGSHIP PROJECTS
+════════════════════════════════════════ -->
+<section id="flagship">
+  <div class="container-fluid px-0">
+    <div class="flag-wrap">
+      <div class="flag-lbl">
+        <h3>Our<br>Flagship<br>Projects</h3>
+        <p>Transforming spaces across Delhi NCR</p>
+      </div>
+      <div class="flag-slides" style="position:relative;overflow:hidden;flex:1;">
+        <div class="flag-track" id="flagTrack">
+          <div class="flag-card">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&q=75&fit=crop" alt="Corporate Office Noida"/>
+            <div class="flag-lbl-ov">Corporate Office · Noida</div>
+          </div>
+          <div class="flag-card">
+            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=700&q=75&fit=crop" alt="IT Campus Gurugram"/>
+            <div class="flag-lbl-ov">IT Campus · Gurugram</div>
+          </div>
+          <div class="flag-card">
+            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?w=700&q=75&fit=crop" alt="Co-Working Delhi"/>
+            <div class="flag-lbl-ov">Co-Working Space · Delhi</div>
+          </div>
+          <div class="flag-card">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=700&q=75&fit=crop" alt="Café Faridabad"/>
+            <div class="flag-lbl-ov">Café Interior · Faridabad</div>
+          </div>
+          <div class="flag-card">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=75&fit=crop" alt="School Library Ghaziabad"/>
+            <div class="flag-lbl-ov">School Library · Ghaziabad</div>
+          </div>
+        </div>
+        <div class="flag-arrs">
+          <button class="flag-a" id="flagPrev" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+          <button class="flag-a" id="flagNext" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CLIENT TESTIMONIALS
+════════════════════════════════════════ -->
+<section id="testi">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-quote-left"></i>Reviews</div>
+      <h2 class="sec-title anim-title">Client <span>Testimonials</span></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="tc anim-up"><div class="tc-thumb"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75&fit=crop&crop=face" alt="Rahul Sharma"/><div class="tc-play"><i class="fas fa-play" style="margin-left:2px"></i></div></div><div class="tc-body"><div class="tc-name">Rahul Sharma</div><div class="tc-role">Director, TechSolutions · Noida</div></div></div>
+      <div class="tc anim-up"><div class="tc-thumb"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=75&fit=crop&crop=face" alt="Priya Mehta"/><div class="tc-play"><i class="fas fa-play" style="margin-left:2px"></i></div></div><div class="tc-body"><div class="tc-name">Priya Mehta</div><div class="tc-role">Interior Architect · Delhi</div></div></div>
+      <div class="tc anim-up"><div class="tc-thumb"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=75&fit=crop&crop=face" alt="Vikram Bhatia"/><div class="tc-play"><i class="fas fa-play" style="margin-left:2px"></i></div></div><div class="tc-body"><div class="tc-name">Vikram Bhatia</div><div class="tc-role">MD, Bhatia Group · Gurugram</div></div></div>
+      <div class="tc anim-up"><div class="tc-thumb"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=75&fit=crop&crop=face" alt="Arjun Kapoor"/><div class="tc-play"><i class="fas fa-play" style="margin-left:2px"></i></div></div><div class="tc-body"><div class="tc-name">Arjun Kapoor</div><div class="tc-role">Founder, CaféHub · Delhi</div></div></div>
+      <div class="tc anim-up"><div class="tc-thumb"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=75&fit=crop&crop=face" alt="Sunita Gupta"/><div class="tc-play"><i class="fas fa-play" style="margin-left:2px"></i></div></div><div class="tc-body"><div class="tc-name">Sunita Gupta</div><div class="tc-role">Principal, DPS School · Faridabad</div></div></div>
+      <div class="tc anim-up"><div class="tc-thumb"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=75&fit=crop&crop=face" alt="Neha Rastogi"/><div class="tc-play"><i class="fas fa-play" style="margin-left:2px"></i></div></div><div class="tc-body"><div class="tc-name">Neha Rastogi</div><div class="tc-role">Lab Manager, DRDO · Delhi</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     WHY CHOOSE AFI SYSTEMS
+════════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-award"></i>Our Edge</div>
+      <h2 class="sec-title anim-title">Why Choose <span>AFI Systems</span></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <div class="row g-md-4">
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="why-c"><div class="why-ico"><i class="fas fa-industry"></i></div><h5>Own Factory</h5><p>In-house manufacturing ensures quality at every step and competitive pricing with no middlemen.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="why-c"><div class="why-ico"><i class="fas fa-pencil-ruler"></i></div><h5>100% Custom</h5><p>Every piece built to your exact dimensions, finish, colour, and specifications — retail or bulk.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="why-c"><div class="why-ico"><i class="fas fa-truck"></i></div><h5>Fast Delivery</h5><p>Average 15-day delivery with professional installation across pan-Delhi NCR.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="why-c"><div class="why-ico"><i class="fas fa-headset"></i></div><h5>After-Sales Support</h5><p>Dedicated WhatsApp support from first inquiry to post-installation — always available.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     OUR CREDENTIALS
+════════════════════════════════════════ -->
+<section id="creds">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-certificate"></i>Certifications</div>
+      <h2 class="sec-title anim-title">Our <span>Credentials</span></h2>
+      <div class="sec-bar"></div>
+      <p class="sec-sub">Industry-recognised certifications that validate our commitment to quality, safety, and environmental responsibility.</p>
+    </div>
+    <div class="row g-md-4">
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="cred-card"><div class="cred-ico-box"><i class="fas fa-certificate"></i></div><h5>ISO 9001:2015</h5><p>Quality Management System certified for consistent furniture manufacturing standards.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="cred-card"><div class="cred-ico-box"><i class="fas fa-award"></i></div><h5>MSME Registered</h5><p>Officially registered under the Ministry of Micro, Small &amp; Medium Enterprises, Govt of India.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="cred-card"><div class="cred-ico-box"><i class="fas fa-leaf"></i></div><h5>Eco-Friendly</h5><p>Committed to using sustainable and eco-friendly materials in our furniture production.</p></div>
+      </div>
+      <div class="col-md-6 col-lg-3 anim-up">
+        <div class="cred-card"><div class="cred-ico-box"><i class="fas fa-file-invoice"></i></div><h5>GST Registered</h5><p>Fully GST compliant. Proper invoicing and tax documentation provided for all orders.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BLOG / TIPS & INSIGHTS
+════════════════════════════════════════ -->
+<section id="blog">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-newspaper"></i>Tips &amp; Insights</div>
+      <h2 class="sec-title anim-title">Furniture <span>Guides &amp; Blog</span></h2>
+      <div class="sec-bar"></div>
+      <p class="sec-sub">Expert advice on choosing, placing and maintaining furniture for homes and offices.</p>
+    </div>
+    <div class="blog-grid anim-up">
+
+      <!-- Featured large post -->
+      <div class="bl-feat">
+        <div class="bl-img">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=75&fit=crop" alt="Office Layout Blog"/>
+        </div>
+        <div class="bl-body">
+          <span class="bl-tag">Office Setup</span>
+          <h4>How to Plan Your Office Furniture Layout for Maximum Productivity</h4>
+          <p>Smart furniture placement can boost focus and collaboration. Discover expert tips on workstation spacing, ergonomic chair placement and layout optimisation.</p>
+          <div class="bl-meta">
+            <span><i class="fas fa-calendar-alt"></i> May 2025</span>
+            <span><i class="fas fa-clock"></i> 5 min</span>
+            <span><i class="fas fa-eye"></i> 1.2k views</span>
+          </div>
+          <a href="#contact" class="bl-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Side list -->
+      <div class="bl-side">
+        <div class="bl-item">
+          <div class="bl-item-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=70&fit=crop" alt="Wardrobe"/></div>
+          <div class="bl-item-body">
+            <span class="bl-tag" style="font-size:.62rem;padding:2px 8px;">Home Interior</span>
+            <h6>Top 5 Wardrobe Trends in 2025 for Indian Homes</h6>
+            <p>Latest styles transforming Indian bedrooms.</p>
+            <a href="#contact" class="bl-more" style="font-size:.76rem;margin-top:4px;">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="bl-item">
+          <div class="bl-item-img"><img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=300&q=70&fit=crop" alt="Chair"/></div>
+          <div class="bl-item-body">
+            <span class="bl-tag" style="font-size:.62rem;padding:2px 8px;">Ergonomics</span>
+            <h6>Choosing the Right Ergonomic Chair — A Complete Guide</h6>
+            <p>Long hours demand the right support. What to look for.</p>
+            <a href="#contact" class="bl-more" style="font-size:.76rem;margin-top:4px;">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="bl-item">
+          <div class="bl-item-img"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&q=70&fit=crop" alt="Café"/></div>
+          <div class="bl-item-body">
+            <span class="bl-tag" style="font-size:.62rem;padding:2px 8px;">Commercial</span>
+            <h6>7 Café Furniture Ideas That Attract More Customers</h6>
+            <p>Right seating dramatically improves footfall.</p>
+            <a href="#contact" class="bl-more" style="font-size:.76rem;margin-top:4px;">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="bl-item">
+          <div class="bl-item-img"><img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=300&q=70&fit=crop" alt="Maintenance"/></div>
+          <div class="bl-item-body">
+            <span class="bl-tag" style="font-size:.62rem;padding:2px 8px;">Maintenance</span>
+            <h6>5 Tips to Extend the Life of Your Office Furniture</h6>
+            <p>Simple habits that keep desks &amp; chairs new for years.</p>
+            <a href="#contact" class="bl-more" style="font-size:.76rem;margin-top:4px;">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INSTAGRAM REELS
+════════════════════════════════════════ -->
+<section id="insta">
+  <div class="container">
+    <div class="insta-hdr anim-up">
+      <div class="insta-title-wrap">
+        <div class="insta-ico-box"><i class="fab fa-instagram"></i></div>
+        <div>
+          <h3>@AFISystems</h3>
+          <p>Follow us for furniture inspiration, space tours &amp; offers</p>
+        </div>
+      </div>
+      <a href="https://instagram.com" target="_blank" class="btn-insta">
+        <i class="fab fa-instagram"></i>Follow on Instagram
+      </a>
+    </div>
+    <!-- Built by home.js -->
+    <div class="reels-viewport anim-up"><div class="reels-track" id="reelsTrack"></div></div>
+    <div class="reels-nav">
+      <button class="reel-arr" id="rlPrev" aria-label="Previous reels"><i class="fas fa-chevron-left"></i></button>
+      <button class="reel-arr" id="rlNext" aria-label="Next reels"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA BAND
+════════════════════════════════════════ -->
+<section id="cta-band">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      <div class="col-lg-7 anim-left">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>Get a free consultation and custom quote within 24 hours — no obligations.</p>
+      </div>
+      <div class="col-lg-5 d-flex gap-3 justify-content-lg-end flex-wrap anim-right">
+        <a href="#contact" class="btn-cta-w"><i class="fas fa-file-alt"></i>Request Quote</a>
+        <a href="https://wa.me/919818251017?text=Hi%20AFI!" target="_blank" class="btn-cta-wa"><i class="fab fa-whatsapp"></i>WhatsApp Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     OUR LOCATION
+════════════════════════════════════════ -->
+<section id="location">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-map-marker-alt"></i>Find Us</div>
+      <h2 class="sec-title anim-title">Our <span>Location</span></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <div class="loc-grid anim-up">
+
+      <!-- Google Map -->
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192776!2d77.06889754973958!3d28.52758200617044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1718000000000!5m2!1sen!2sin"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Info card -->
+      <div class="loc-info">
+        <div class="loc-info-title"><i class="fas fa-map-marker-alt"></i>AFI Systems</div>
+
+        <div class="loc-row">
+          <div class="loc-ico"><i class="fas fa-map-marker-alt"></i></div>
+          <div><div class="loc-lbl">Address</div><div class="loc-val">Delhi NCR, India<br>Serving Pan-Delhi NCR</div></div>
+        </div>
+        <div class="loc-row">
+          <div class="loc-ico"><i class="fas fa-phone"></i></div>
+          <div><div class="loc-lbl">Phone</div><div class="loc-val"><a href="tel:+919818251017">+91 98182 51017</a></div></div>
+        </div>
+        <div class="loc-row">
+          <div class="loc-ico"><i class="fab fa-whatsapp"></i></div>
+          <div><div class="loc-lbl">WhatsApp</div><div class="loc-val"><a href="https://wa.me/919818251017" target="_blank">Chat Now →</a></div></div>
+        </div>
+        <div class="loc-row">
+          <div class="loc-ico"><i class="fas fa-clock"></i></div>
+          <div><div class="loc-lbl">Working Hours</div><div class="loc-val">Mon–Sat: 10 AM – 7 PM<br>Sunday: Closed</div></div>
+        </div>
+
+        <a href="https://wa.me/919818251017?text=Hi%2C%20I%27d%20like%20directions%20to%20your%20showroom!" target="_blank" class="btn-loc-dir">
+          <i class="fab fa-whatsapp"></i>Get Directions
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CONTACT FORM
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="sec-eye anim-fade"><i class="fas fa-envelope"></i>Get In Touch</div>
+      <h2 class="sec-title anim-title">Contact <em>Us</em></h2>
+      <div class="sec-bar"></div>
+    </div>
+    <div class="contact-layout anim-up">
+
+      <!-- Left: Address & Contact info -->
+      <div>
+        <div class="addr-title">Address &amp; Contact</div>
+        <div class="addr-list">
+          <div class="addr-row">
+            <div class="addr-ico"><i class="fas fa-map-marker-alt"></i></div>
+            <div><div class="addr-row-lbl">Registered Office</div><div class="addr-row-val">New Delhi, India</div></div>
+          </div>
+          <div class="addr-row">
+            <div class="addr-ico"><i class="fas fa-phone-alt"></i></div>
+            <div><div class="addr-row-lbl">Phone</div><div class="addr-row-val">+91 98182 51017</div></div>
+          </div>
+          <div class="addr-row">
+            <div class="addr-ico"><i class="fas fa-envelope"></i></div>
+            <div><div class="addr-row-lbl">Email</div><div class="addr-row-val">info@afisystems.in</div></div>
+          </div>
+          <div class="addr-row">
+            <div class="addr-ico"><i class="fas fa-clock"></i></div>
+            <div><div class="addr-row-lbl">Business Hours</div><div class="addr-row-val">Mon to Sat – 10:00 to 7:00</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Dark card form -->
+      <div class="form-card">
+        <div class="form-card-title">Send Us a Message</div>
+        <form id="contactForm" action="contact.php" method="POST">
+          <div class="form-row-2">
+            <input  type="text"  name="name"     id="cf_name"  class="f-inp" placeholder="Your Name"      required/>
+            <input  type="email" name="email"    id="cf_email" class="f-inp" placeholder="Email Address"/>
+          </div>
+          <div class="form-row-2">
+            <input  type="tel"   name="phone"    id="cf_phone" class="f-inp" placeholder="Phone Number"   required/>
+            <select name="category" id="cf_cat" class="f-inp" required style="appearance:auto;-webkit-appearance:auto;">
+              <option value="" disabled selected>I would like to discuss...</option>
+              <option>Office &amp; Executive Chairs</option>
+              <option>Workstations &amp; Desks</option>
+              <option>Conference Tables</option>
+              <option>Sofa &amp; Lounge</option>
+              <option>Wardrobes &amp; LED Panels</option>
+              <option>Pantry &amp; Kitchen</option>
+              <option>Student Benches</option>
+              <option>Café Furniture</option>
+              <option>Metal Storage &amp; Lab</option>
+              <option>Other / Multiple Items</option>
+            </select>
+          </div>
+          <textarea name="message" id="cf_msg" class="f-inp" placeholder="Your Message" style="margin-bottom:0;" required></textarea>
+          <button type="submit" class="btn-send-msg">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="row g-md-5">
+
+      <!-- Brand col -->
+      <div class="col-lg-3">
+        <div class="fl-logo">
+          <img src="logo.jpg" alt="AFI Systems"/>
+          <p>Affordable Furniture Interiors Systems — Delhi NCR's trusted retail &amp; manufacturing brand for smart, stylish furniture solutions.</p>
+          <div class="fl-social">
+            <a href="https://wa.me/919818251017" target="_blank" class="fl-soc"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="fl-soc"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" class="fl-soc"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="fl-soc"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="fl-soc"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- <a href="https://wa.me/919818251017" target="_blank" class="fl-wa"><i class="fab fa-whatsapp"></i>+91 98182 51017</a> -->
+        </div>
+      </div>
+
+      <!-- Seating links -->
+      <div class="col-md-4 col-lg-2">
+        <h6>Seating</h6>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Executive Chairs</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Mesh Chairs</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Café Chairs</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Lounge Chairs</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Training Chairs</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Student Benches</a></li>
+        </ul>
+      </div>
+
+      <!-- Tables links -->
+      <div class="col-md-4 col-lg-2">
+        <h6>Tables</h6>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Workstations</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Conference Tables</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Director Desks</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Reception Desks</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Café Tables</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Work-from-Home</a></li>
+        </ul>
+      </div>
+
+      <!-- Storage links -->
+      <div class="col-md-4 col-lg-2">
+        <h6>Storage</h6>
+        <ul>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Wardrobes &amp; LED</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Modular Kitchen</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Metal Lockers</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>File Cabinets</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Lab Cabinets</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right"></i>Pantry Units</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact / chat col -->
+      <div class="col-lg-3">
+        <h6>Need Help? Chat Now</h6>
+        <p style="font-family:var(--font-b);font-size:.84rem;color:#5a7a92;line-height:1.65;margin-bottom:14px;">
+          Available Mon–Sat, 10AM–7PM. WhatsApp us for quotes, catalogues &amp; support.
+        </p>
+        <a href="https://wa.me/919818251017" target="_blank"
+           style="display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;
+                  padding:10px 18px;border-radius:4px;font-weight:700;font-size:.83rem;
+                  font-family:var(--font-b);transition:background .2s;">
+          <i class="fab fa-whatsapp"></i>Chat on WhatsApp
+        </a>
+        <div class="fl-info">
+          <div><i class="fas fa-phone"></i> +91 98182 51017</div>
+          <div><i class="fas fa-envelope"></i> info@afisystems.in</div>
+          <div><i class="fas fa-map-marker-alt"></i> Delhi NCR, India</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="fl-bottom">
+    <div class="container d-flex justify-content-between flex-wrap gap-2">
+      <span>© 2026 <a href="#">AFI Systems™</a> — Affordable Furniture Interiors Systems. All rights reserved.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a> · <a href="#contact">Contact</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     FLOATING WHATSAPP + BACK TO TOP
+════════════════════════════════════════ -->
+<a href="https://wa.me/919818251017?text=Hi%20AFI%20Systems!" target="_blank" class="wa-float" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="home.js"></script>
+
+</body>
+</html>
