@@ -6,8 +6,10 @@
 /* ── CSS VARIABLES ── */
 :root {
   /* Brand colours */
-  --green:      #5aad22;
-  --green-dark: #458a18;
+  /* --green:      #5aad22; */
+  --green:#357abe;
+  /* --green-dark: #458a18; */
+  --green-dark:##357abe;
   --green-light:#eef7e6;
   --blue:       #2370b0;
   --blue-dark:  #1a5588;
